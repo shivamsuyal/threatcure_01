@@ -27,9 +27,6 @@ $max_width: 1200px;
 $min_font: 16px;
 $max_font: 19px;
 
-html {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
-}
 
 :root {
     --highlight: #58968E;
@@ -37,8 +34,30 @@ html {
   
   body {
     font-family: "Roboto", sans-serif;
-    margin: 0;
+    margin: 0px;
+    padding:0px;
     background-color: #232e33;
+    color: white;
+    height: 1500px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+
+  #mode{
+    position: fixed;
+    right:0;
+    top:50vh;
+    background-color: darkgrey;
+    opacity: 0.3;
+    border: 5px solid grey;
+    border-radius: 1.5rem;
+    padding:0.3rem;
+    height: 1.4rem;
+    width: 1.4rem;
+    overflow: hidden;
+    transition: all 300ms ease-out;
+  }
+  #mode:hover{
+    opacity: 1;
   }
 
   #logo{
@@ -52,11 +71,13 @@ html {
   }
 
   #navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
     height: 4.6rem;
-    width: 100vw;
+    width: 100%;
     font-weight: bold;
     background-color: #192024;
-    overflow: hidden;
     
     ul {
       margin: 0;
@@ -128,7 +149,7 @@ html {
 }
 
 @media only screen and (max-width: 1000px) {
-  #navbar ul:first-of-type{
+  #navbar ul{
     display: none;
   }
   #list-icon{
@@ -201,11 +222,6 @@ html {
       bottom: -1em;
       transition: all ease-out 150ms;
     }
-
-    // li a:hover::after {
-    //   width:60%;
-    // }
-    
     li a:hover{
       color:var(--highlight);
     }
