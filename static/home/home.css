@@ -13,6 +13,7 @@ body {
   padding: 0px;
   background-color: #232e33;
   color: white;
+  height: 1500px;
 }
 
 body {
@@ -78,6 +79,7 @@ body {
 }
 
 #navbar {
+  z-index: 10000000;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;

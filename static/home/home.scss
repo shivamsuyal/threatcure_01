@@ -44,7 +44,7 @@ body {
   padding:0px;
   background-color: #232e33;
   color: white;
-  // height: 1500px;
+  height: 1500px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
@@ -95,6 +95,7 @@ body {
   }
 
   #navbar {
+    z-index: 10000000;
     position: sticky;
     top: 0px;
     left: 0px;
