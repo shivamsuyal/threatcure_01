@@ -31,9 +31,9 @@ body {
   position: fixed;
   right: 0;
   top: 50vh;
-  background-color: darkgrey;
+  background-color: #8B86D3;
   opacity: 0.3;
-  border: 5px solid grey;
+  border: 3px solid white;
   border-radius: 1.5rem;
   padding: 0.3rem;
   height: 1.4rem;
@@ -45,6 +45,20 @@ body {
 
 #mode:hover {
   opacity: 1;
+}
+
+.moon {
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  background-color: #8B86D3;
+}
+
+.sun {
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  visibility: hidden;
 }
 
 #logo {
