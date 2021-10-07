@@ -1,3 +1,9 @@
+// import font
+@font-face {
+  font-family: acumin-pro-wide;
+  src: url(./../fonts/AcuminProWide-Bold.otf);
+}
+
 // RESPONSIVE FONT
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
@@ -32,16 +38,17 @@ $max_font: 19px;
     --highlight: #58968E;
   }
   
-  body {
-    font-family: "Roboto", sans-serif;
-    margin: 0px;
-    padding:0px;
-    background-color: #232e33;
-    color: white;
-    height: 1500px;
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  }
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding:0px;
+  background-color: #232e33;
+  color: white;
+  // height: 1500px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
 
+// Dark/Light Mode button
   #mode{
     position: fixed;
     right:0;
@@ -72,11 +79,11 @@ $max_font: 19px;
     // transition: all 500ms ease-out;
     // background-color: #0584C3;
     transition: all 500ms ease-out;
-    transform: translateY(-2rem);
+    transform: translateY(2rem);
     visibility: hidden;
   }
 
-
+// NAVBAR
   #logo{
     display: inline-flex;
     font-size: 1.5rem;
@@ -88,7 +95,7 @@ $max_font: 19px;
   }
 
   #navbar {
-    position: fixed;
+    position: sticky;
     top: 0px;
     left: 0px;
     height: 4.6rem;
@@ -104,7 +111,7 @@ $max_font: 19px;
       justify-content: flex-end;
       align-items: center;
       padding: 1em 0;
-  
+
       li a {
         color: white;
         text-decoration: none;
@@ -112,7 +119,7 @@ $max_font: 19px;
         position: relative;
         transition: all ease-in-out 550ms;
       }
-  
+
       li a::after {
         content: "";
         position: absolute;
@@ -123,7 +130,7 @@ $max_font: 19px;
         bottom: -1em;
         transition: all ease-in-out 250ms;
       }
-  
+
       li a:hover::after {
         width:60%;
       }
@@ -155,16 +162,126 @@ $max_font: 19px;
     }
   }
 
-#list-icon{
-  float:right;
-  position: relative;
-  top:1rem;
-  right: 2rem;
-  height: 2.6rem;
-  width:2.6rem;
-  display: none;
-}
 
+// POPUP MENU
+  // 3 dash
+  #list-icon{
+    float:right;
+    position: relative;
+    top:1rem;
+    right: 2rem;
+    height: 2.6rem;
+    width:2.6rem;
+    display: none;
+  }
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #44318D;
+    margin: auto;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 1rem;
+    overflow: hidden;
+    animation: popnav 600ms ease-out forwards;
+    
+    ol{
+      list-style-type: none;
+      text-align: center;
+      padding: 0 1em;
+
+      li{
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      li a {
+        text-align: left;
+        color: #DEF1F1;
+        text-decoration: none;
+        position: relative;
+        transition: all ease-in-out 550ms;
+      }
+      button{
+        margin-top: 0.6rem;
+        background-color: #2A1B3C;
+        color: #DEF1F1;
+        text-decoration: none;
+        padding: 0.7rem;
+        position: relative;
+        border:2px solid green;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border-radius: 1rem;
+        padding-top: 0.6rem;
+        transition: all ease-in-out 700ms;
+      }
+      li a::after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 0.4em;
+        width: 0%;
+        background-color: var(--highlight);
+        bottom: -1em;
+        transition: all ease-out 150ms;
+      }
+      li a:hover{
+        color:var(--highlight);
+      }
+
+      button:hover{
+        background-color: rgb(94, 255, 0);
+        border-color: rgb(94, 255, 0);
+        color:black;
+        
+      }
+    }
+
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 30px;
+    position: relative;
+    right: 0.5rem;
+    bottom: 0.1rem;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @keyframes popnav {
+    from{
+      transform: translateY(-300px);
+    }
+    to{
+      transform: translateY(100px);
+    }
+  }
+//POPUP MENU END
+
+// RESPONSIVE
 @media only screen and (max-width: 1000px) {
   #navbar ul{
     display: none;
@@ -174,109 +291,86 @@ $max_font: 19px;
   }
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content */
-.modal-content {
-  background-color: #44318D;
-  margin: auto;
-  border: 1px solid #888;
-  width: 80%;
-  border-radius: 1rem;
-  overflow: hidden;
-  animation: popnav 600ms ease-out forwards;
-  
-  ol{
-    list-style-type: none;
-    text-align: center;
-    padding: 0 1em;
-
-    li{
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    li a {
-      text-align: left;
-      color: #DEF1F1;
-      text-decoration: none;
-      position: relative;
-      transition: all ease-in-out 550ms;
-    }
-    button{
-      margin-top: 0.6rem;
-      background-color: #2A1B3C;
-      color: #DEF1F1;
-      text-decoration: none;
-      padding: 0.7rem;
-      position: relative;
-      border:2px solid green;
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      border-radius: 1rem;
-      padding-top: 0.6rem;
-      transition: all ease-in-out 700ms;
-    }
-    li a::after {
-      content: "";
-      position: absolute;
-      display: block;
-      height: 0.4em;
-      width: 0%;
-      background-color: var(--highlight);
-      bottom: -1em;
-      transition: all ease-out 150ms;
-    }
-    li a:hover{
-      color:var(--highlight);
-    }
-
-    button:hover{
-      background-color: rgb(94, 255, 0);
-      border-color: rgb(94, 255, 0);
-      color:black;
-      
-    }
+// HOME
+#Home{
+  // border: 1px solid white;
+  background: #192024;
+  padding-left: 43%;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  div{
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid white;
+    overflow: hidden;
+    width: fit-content;
+    width: 0;
+    transition: all 10s ease-out;
+    animation: home1 6s ease-out forwards;
+    // transform: scaleX(-1) rotate(90deg);
   }
 
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 30px;
-  position: relative;
-  right: 0.5rem;
-  bottom: 0.1rem;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@keyframes popnav {
-  from{
-    transform: translateY(-300px);
+  h1{
+    font-family: acumin-pro-wide,sans-serif;
+    @include fluid-type($min_width, $max_width, 30px, 40px);
+    margin: 0;
+    padding: 0;
+    line-height: 4rem;
+    font-weight: 600;
+    font-style: normal;
   }
-  to{
-    transform: translateY(100px);
+}
+
+@keyframes home1 {
+  0%{
+    transform: scaleX(-1) rotate(90deg);
+  }
+  15%{ 
+    transform: scaleX(1) rotate(0deg);
+  }
+  20%{
+    transform: scaleX(-1);
+    width: 0;
+  }
+  50%{
+    transform: scaleX(-1);
+    width: 4rem;
+  }
+  51%{
+    transform: scaleX(-1) translateX(10px);
+    width: 4rem;
+  }
+  53%{
+    transform: scaleX(-1) translateX(-10px);
+    width: 4rem;
+  }
+  56%{
+    transform: scaleX(-1) translateX(10px);
+    width: 4rem;
+  }
+  59%{
+    transform: scaleX(-1) translateX(-10px);
+    width: 4rem;
+  }
+  63%{
+    transform: scaleX(-1) translateX(10px);
+    width: 4rem;
+  }
+  64%{
+    transform: translateX(0px);
+    width: 4rem;
+  }
+  65%{
+    transform: scaleX(-1);
+    width: 0;
+  }
+  70%{
+    transform: scaleX(1);
+    width: 0;
+  }
+  100%{
+    width: 10em;
   }
 }
 
