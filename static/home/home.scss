@@ -4,6 +4,7 @@
   src: url(./../fonts/AcuminProWide-Bold.otf);
 }
 
+
 // RESPONSIVE FONT
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
@@ -44,7 +45,8 @@ body {
   padding:0px;
   background-color: #232e33;
   color: white;
-  height: 1500px;
+  height: 4500px;
+  overflow-x: hidden;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
@@ -91,7 +93,10 @@ body {
     padding-right: 5em;
     position: relative;
     top:1.3rem;
+    // top: -2rem;
     left: 1rem;
+    opacity: 0;
+    transition: opacity 500ms ease-out;
   }
 
   #navbar {
@@ -116,7 +121,7 @@ body {
       li a {
         color: white;
         text-decoration: none;
-        padding-right: 5em;
+        padding-right: 1.5rem;
         position: relative;
         transition: all ease-in-out 550ms;
       }
@@ -145,7 +150,7 @@ body {
         text-decoration: none;
         padding: 0.7rem;
         position: relative;
-        right: 2rem;
+        right: 0.3rem;
         border:2px solid green;
         font-size: 1rem;
         font-weight: 500;
@@ -297,29 +302,40 @@ body {
 #Home{
   // border: 1px solid white;
   background: #192024;
-  padding-left: 43%;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  z-index: -10000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  // padding-top: 1rem;
+  // padding-bottom: 10rem;
+  position: relative;
+  top: -1em;
+
   div{
     margin: 0;
     padding: 0;
-    border-left: 2px solid white;
+    border-right:2px solid white ;
     overflow: hidden;
-    width: fit-content;
-    width: 0;
-    transition: all 10s ease-out;
-    animation: home1 6s ease-out forwards;
-    // transform: scaleX(-1) rotate(90deg);
+    width: 7em;
+    transition: all 300ms ease-out;
+    // animation: home1 6s ease-out forwards;
   }
 
   h1{
     font-family: acumin-pro-wide,sans-serif;
-    @include fluid-type($min_width, $max_width, 30px, 40px);
+    @include fluid-type($min_width, $max_width, 35px, 40px);
+    height: 1.5em;
     margin: 0;
     padding: 0;
     line-height: 4rem;
     font-weight: 600;
     font-style: normal;
+    // position:sticky;
+    overflow:hidden;
   }
 }
 
@@ -327,7 +343,7 @@ body {
   0%{
     transform: scaleX(-1) rotate(90deg);
   }
-  15%{ 
+  19%{ 
     transform: scaleX(1) rotate(0deg);
   }
   20%{
@@ -338,6 +354,7 @@ body {
     transform: scaleX(-1);
     width: 4rem;
   }
+  // animation jiggle
   51%{
     transform: scaleX(-1) translateX(10px);
     width: 4rem;
@@ -354,6 +371,7 @@ body {
     transform: scaleX(-1) translateX(-10px);
     width: 4rem;
   }
+  // animation jiggle end
   63%{
     transform: scaleX(-1) translateX(10px);
     width: 4rem;
@@ -370,8 +388,91 @@ body {
     transform: scaleX(1);
     width: 0;
   }
+  // 99%{
+  //   border-left: 0;
+  // }
   100%{
-    width: 10em;
+    // border-left: 2px white solid;
+    width: 7em;
+  }
+}
+
+
+// circle
+#Some1{
+  // border: 1px solid white;
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
+#circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 1s ease-out;
+  #text{
+    color: black;
+    // border: 1px solid black;
+    // display: none;
+    // transform: translateY(5em);
+    opacity: 0;
+    width: 100vw;
+    text-align: center;
+    transition: opacity 2s ease-out;
+    font-family: 'Bebas Neue', cursive;
+    @include fluid-type($min_width, $max_width, 40px, 70px);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+// Service  sliders
+#Services{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 3rem;
+
+  p{
+    border:1px solid white;
+    text-align: center;
+    position: sticky;
+    top: 4.6rem;
+  }
+
+  .a1{
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    padding: 0px;
+    border:1px solid white;
+    width: 70vmin;
+    height: 70vmin;
+    margin-bottom: 4rem;
+    background-color: cadetblue;
+    position: sticky;
+    top: 7rem;
+    p{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      border: 1px solid black;
+      
+      // background-color: chocolate;
+    }
   }
 }
 
