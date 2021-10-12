@@ -10,17 +10,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
 
 
     <!-- CSS -->
         <!-- <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="./static/bootstrap/css/bootstrap-grid.min.css">
         <link rel="stylesheet" href="./static/bootstrap/css/bootstrap-utilities.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" integrity="sha512-yJHCxhu8pTR7P2UgXFrHvLMniOAL5ET1f5Cj+/dzl+JIlGTh5Cz+IeklcXzMavKvXP8vXqKMQyZjscjf3ZDfGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./static/home/home.css">
     
 
     <!-- JS -->
         <!-- <script src="./static/bootstrap/js/bootstrap.min.js" defer></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
         <script src="./static/home/home.js" defer></script>
 
 
@@ -54,7 +60,7 @@
             
             <li><a href="#">Pricing</a></li>
 
-            <li><a href="#">About Team</a></li>
+            <li><a href="#About">About Team</a></li>
 
             <button> Contact Us</button>
         </ul>
@@ -78,7 +84,7 @@
                     
                     <li><a href="">Pricing</a></li>
         
-                    <li><a hre`f="">About Team</a></li>
+                    <li><a hre`f="#About">About Team</a></li>
         
                     <button> Contact Us</button>
                 </ol>
@@ -87,6 +93,7 @@
     </section>
     <!-- NAVBAR ENDS -->
 
+    <!-- Home -->
     <section id="Home">
         <div id="text-anim">
             <h1>LOGO</h1>
@@ -94,28 +101,127 @@
         <!-- <TT>This is a dummy text</TT> -->
     </section>
 
+    <!-- growing Circle -->
     <section id="Some1">
+        <p id="text">One stop place for all your cyber security needs</p>
         <div id="circle">
-            <p id="text">One stop place for all your cyber security needs</p>
+            
         </div>
     </section>
 
+
+    <hr>
+    <!-- Horizontal Slider -->
     <section id="Services">
-        <p><tt>Services We Provide</tt></p>
-        <div class="a1" style="background-color: aqua;">
-            <p>A1</p>
+        <p class="service-head">Services We Provide</p>
+        <div class="a1" >
+            <p>Threat Intelligence</p>
         </div>
-        <div class="a1" style="background-color: green;">
-            <p>A2</p>
+        <div class="a1" >
+            <p>VOIP</p>
         </div>
-        <div class="a1" style="background-color: yellow;">
-            <p>A3</p>
+        <div class="a1" >
+            <p>Phishing</p>
         </div>
-        <div class="a1" style="background-color: chocolate;">
-            <p>A4</p>
+        <div class="a1" >
+            <p>VAPT</p>
         </div>
-
+        <div class="a1" >
+            <p>Web PT</p>
+        </div>
+        <div class="a1" >
+          <p>mobile PT</p>
+          <!-- <span></span> overlay -->
+        </div>
     </section>
 
+    <hr>
+
+    <!-- Vertical Slider -->
+    <p id="customers">Customer</p>
+    <section id="slide">
+      <ul id="autoWidth" class="cs-hidden">
+        <li class="item-a">
+          <div class="box">
+            <div class="slide-img">
+              1
+            </div>
+          </div>
+        </li>
+        <li class="item-b">
+          <div class="box">
+            <div class="slide-img">
+              2
+            </div>
+          </div>
+        </li>
+        <li class="item-c">
+          <div class="box">
+            <div class="slide-img">
+              3
+            </div>
+          </div>
+        </li>
+        <li class="item-d">
+          <div class="box">
+            <div class="slide-img">
+              4
+            </div>
+          </div>
+        </li>
+        <li class="item-e">
+          <div class="box">
+            <div class="slide-img">
+              5
+            </div>
+          </div>
+        </li>
+        <li class="item-f">
+          <div class="box">
+            <div class="slide-img">
+              6
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <hr>
+    <section id="About">
+      <div id="about1">
+        Who Are We ?
+      </div>
+      <div id="about2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur doloremque ad et temporibus, repudiandae numquam vitae facere deleniti cupiditate quae ab autem adipisci totam exercitationem, at quis ducimus obcaecati deserunt!
+      </div>
+      <div id="about3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sed, totam fugit libero vitae harum neque quae iusto omnis, commodi vel ab voluptatem, voluptas illum numquam delectus ea error officiis?
+      </div>
+    </section>
+
+    <hr>
+    <br><br>
+    <!-- Footer -->
+    <footer>
+      <div>
+        <h3>About Threatcure</h3>
+        <p>Threatcure is an independent, self funded, initiative to provide full spectrum vishing infrastructure</p>
+      </div>
+
+      <div>
+        <h3>Importat Links</h3>
+        <ul>
+          <li>l1</li>
+          <li>l2</li>
+          <li>l3</li>
+          <li>l4</li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="https://www.makeinindia.com/home">
+          <img src="https://threatcure.com/images/makeinindia.png" alt="Make in India" title="Make in India" width="200"></a>
+      </div>
+    </footer>
 </body>
+
 </html>

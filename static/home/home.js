@@ -72,13 +72,13 @@ observer1.observe(logo)
 
   const circle = document.getElementById('circle');
   const text = document.getElementById('text');
-  let inc=0;
+  // let inc=0;
 
   const options2={
     rootMargin:"0px 0px -8% 0px"
   }
   const options3={
-    rootMargin:"0px 0px -40% 0px"
+    rootMargin:"0px 0px -30% 0px"
   }
 
   const callback2_circle=function(entries){
@@ -89,8 +89,8 @@ observer1.observe(logo)
       text.style.visibility="hidden"
       circle.style.borderBottomLeftRadius="0px";
       circle.style.borderBottomRightRadius="0px";
-      text.style.transition="none"
-      text.style.opacity="0"
+      text.style.transition="none" //text bug check
+      text.style.opacity="0" //text bug check
     }
     else{
       if(entries[0].boundingClientRect.bottom > 0){
@@ -98,9 +98,11 @@ observer1.observe(logo)
         circle.style.height="25vw"
         circle.style.borderBottomLeftRadius="50%";
         circle.style.borderBottomRightRadius="50%";
-        text.style.transition="none"
-        text.style.opacity="0"
-        // text.style.transition="all 2s ease-out"
+        text.style.transition="none" //text bug check
+        text.style.visibility="hidden" //text bug check
+        text.style.opacity="0" //text bug check
+        text.style.transform="translateY(0px)" //text bug check
+        text.style.transition="all 2s ease-out" //text bug check
       }
     }
   }
@@ -108,14 +110,19 @@ observer1.observe(logo)
   const callback3_text=function(entries){
     // console.log(entries[0])
     if(entries[0].isIntersecting){
-      text.style.transition="opacity 2s ease-out"
+      text.style.transition="all 2s ease-out"
       text.style.visibility="visible"
       text.style.opacity="1"
-    }else{
-      if(entries[0].boundingClientRect.bottom > 0){
-        text.style.opacity="0"
-      }
+      text.style.transform="translateY(-20px)"
     }
+    // else{
+    //   if(entries[0].boundingClientRect.bottom > 0){
+    //     // text.style.transition="none"
+    //     text.style.visibility="hidden"
+    //     text.style.opacity="0"
+    //     text.style.transform="translateY(0px)"
+    //   }
+    // }
   }
 
 
@@ -126,5 +133,68 @@ observer1.observe(logo)
   observer3.observe(text)
 
 
+
+  const servicetext=document.querySelector(".service-head")
+  const customertext=document.getElementById("customers")
+  const about1=document.getElementById("about1")
+  
+  // console.log(servicetext)
+const options4={
+  rootMargin:"0px 0px -10% 0px"
+}
+const callback4_up = function (entries){
+  // console.log(entries[0])
+  if(entries[0].isIntersecting){
+    entries[0].target.style.opacity="1"
+    entries[0].target.style.transform="translateY(-20px)"
+  }else{
+    entries[0].target.style.opacity="0"
+    entries[0].target.style.transform="translateY(0px)"
+  }
+}
+  var observer4= new IntersectionObserver(callback4_up,options4);
+  observer4.observe(servicetext)
+  observer4.observe(customertext)
+  observer4.observe(about1)
+
+
+
+const about2=document.getElementById("about2")
+const about3=document.getElementById("about3")
+const options5={
+  rootMargin:"0px 0px -5% 0px"
+}
+const callback5_about=function (entries){
+  console.log("hello")
+  if(entries[0].isIntersecting){
+    about2.style.height="fit-content"
+    about2.style.height="-moz-fit-content"
+    about2.style.padding="2rem 0px 2rem 0px"
+    about3.style.height="fit-content"
+    about3.style.height="-moz-fit-content"
+    about3.style.padding="2rem 0px 2rem 0px"
+  }else{
+    if(entries[0].boundingClientRect.bottom > 0){
+      about2.style.height="";
+      about3.style.height="";
+      about2.style.padding="";
+      about3.style.padding="";
+    }
+  }
+}
+var observer5= new IntersectionObserver(callback5_about,options5)
+observer5.observe(about2)
+
+
+
+$('#autoWidth').lightSlider({
+  autoWidth:true,
+  loop:true,
+  enableDrag:true,
+  pager:false,
+  onSliderLoad: function() {
+      $('#autoWidth').removeClass('cS-hidden');
+  } 
+});  
 
 
