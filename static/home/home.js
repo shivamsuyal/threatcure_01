@@ -140,7 +140,7 @@ observer1.observe(logo)
   
   // console.log(servicetext)
 const options4={
-  rootMargin:"0px 0px -10% 0px"
+  rootMargin:"10% 0px -10% 0px"
 }
 const callback4_up = function (entries){
   // console.log(entries[0])
@@ -165,7 +165,7 @@ const options5={
   rootMargin:"0px 0px -5% 0px"
 }
 const callback5_about=function (entries){
-  console.log("hello")
+  // console.log("hello")
   if(entries[0].isIntersecting){
     about2.style.height="fit-content"
     about2.style.height="-moz-fit-content"
@@ -173,6 +173,10 @@ const callback5_about=function (entries){
     about3.style.height="fit-content"
     about3.style.height="-moz-fit-content"
     about3.style.padding="2rem 0px 2rem 0px"
+    if(about1.style.opacity==""){
+      about1.style.opacity="1"
+      about1.style.transform="translateY(0px)"
+    }
   }else{
     if(entries[0].boundingClientRect.bottom > 0){
       about2.style.height="";

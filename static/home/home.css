@@ -312,6 +312,309 @@ body {
   }
 }
 
+.wrap {
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+}
+
+.svg {
+  stroke: #7ceaa4;
+  position: absolute;
+  bottom: -100vh;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.svg:nth-child(1) {
+  left: 55%;
+  -webkit-animation: raise1 19s linear infinite;
+          animation: raise1 19s linear infinite;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  -webkit-transform: scale(-0.3) rotate(342deg);
+          transform: scale(-0.3) rotate(342deg);
+  z-index: -6;
+  -webkit-filter: blur(-5px);
+          filter: blur(-5px);
+}
+
+@-webkit-keyframes raise1 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(-0.3) rotate(109deg);
+            transform: scale(-0.3) rotate(109deg);
+  }
+}
+
+@keyframes raise1 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(-0.3) rotate(109deg);
+            transform: scale(-0.3) rotate(109deg);
+  }
+}
+
+.svg:nth-child(2) {
+  left: 45%;
+  -webkit-animation: raise2 12s linear infinite;
+          animation: raise2 12s linear infinite;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-transform: scale(0) rotate(258deg);
+          transform: scale(0) rotate(258deg);
+  z-index: -5;
+  -webkit-filter: blur(-4px);
+          filter: blur(-4px);
+}
+
+@-webkit-keyframes raise2 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(0) rotate(10deg);
+            transform: scale(0) rotate(10deg);
+  }
+}
+
+@keyframes raise2 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(0) rotate(10deg);
+            transform: scale(0) rotate(10deg);
+  }
+}
+
+.svg:nth-child(3) {
+  left: 10%;
+  -webkit-animation: raise3 17s linear infinite;
+          animation: raise3 17s linear infinite;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-transform: scale(0.3) rotate(48deg);
+          transform: scale(0.3) rotate(48deg);
+  z-index: -4;
+  -webkit-filter: blur(-3px);
+          filter: blur(-3px);
+}
+
+@-webkit-keyframes raise3 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(0.3) rotate(248deg);
+            transform: scale(0.3) rotate(248deg);
+  }
+}
+
+@keyframes raise3 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(0.3) rotate(248deg);
+            transform: scale(0.3) rotate(248deg);
+  }
+}
+
+.svg:nth-child(4) {
+  left: -3%;
+  -webkit-animation: raise4 8s linear infinite;
+          animation: raise4 8s linear infinite;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-transform: scale(0.6) rotate(26deg);
+          transform: scale(0.6) rotate(26deg);
+  z-index: -3;
+  -webkit-filter: blur(-2px);
+          filter: blur(-2px);
+}
+
+@-webkit-keyframes raise4 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(0.6) rotate(312deg);
+            transform: scale(0.6) rotate(312deg);
+  }
+}
+
+@keyframes raise4 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(0.6) rotate(312deg);
+            transform: scale(0.6) rotate(312deg);
+  }
+}
+
+.svg:nth-child(5) {
+  left: 71%;
+  -webkit-animation: raise5 9s linear infinite;
+          animation: raise5 9s linear infinite;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-transform: scale(0.9) rotate(305deg);
+          transform: scale(0.9) rotate(305deg);
+  z-index: -2;
+  -webkit-filter: blur(-1px);
+          filter: blur(-1px);
+}
+
+@-webkit-keyframes raise5 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(0.9) rotate(297deg);
+            transform: scale(0.9) rotate(297deg);
+  }
+}
+
+@keyframes raise5 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(0.9) rotate(297deg);
+            transform: scale(0.9) rotate(297deg);
+  }
+}
+
+.svg:nth-child(6) {
+  left: 30%;
+  -webkit-animation: raise6 15s linear infinite;
+          animation: raise6 15s linear infinite;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-transform: scale(1.2) rotate(191deg);
+          transform: scale(1.2) rotate(191deg);
+  z-index: -1;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+@-webkit-keyframes raise6 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(1.2) rotate(53deg);
+            transform: scale(1.2) rotate(53deg);
+  }
+}
+
+@keyframes raise6 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(1.2) rotate(53deg);
+            transform: scale(1.2) rotate(53deg);
+  }
+}
+
+.svg:nth-child(7) {
+  left: 53%;
+  -webkit-animation: raise7 13s linear infinite;
+          animation: raise7 13s linear infinite;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-transform: scale(1.5) rotate(249deg);
+          transform: scale(1.5) rotate(249deg);
+  z-index: 0;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+@-webkit-keyframes raise7 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(1.5) rotate(57deg);
+            transform: scale(1.5) rotate(57deg);
+  }
+}
+
+@keyframes raise7 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(1.5) rotate(57deg);
+            transform: scale(1.5) rotate(57deg);
+  }
+}
+
+.svg:nth-child(8) {
+  left: 94%;
+  -webkit-animation: raise8 9s linear infinite;
+          animation: raise8 9s linear infinite;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  -webkit-transform: scale(1.8) rotate(96deg);
+          transform: scale(1.8) rotate(96deg);
+  z-index: 1;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+@-webkit-keyframes raise8 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(1.8) rotate(190deg);
+            transform: scale(1.8) rotate(190deg);
+  }
+}
+
+@keyframes raise8 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(1.8) rotate(190deg);
+            transform: scale(1.8) rotate(190deg);
+  }
+}
+
+.svg:nth-child(9) {
+  left: 66%;
+  -webkit-animation: raise9 10s linear infinite;
+          animation: raise9 10s linear infinite;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  -webkit-transform: scale(2.1) rotate(45deg);
+          transform: scale(2.1) rotate(45deg);
+  z-index: 2;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+@-webkit-keyframes raise9 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(2.1) rotate(160deg);
+            transform: scale(2.1) rotate(160deg);
+  }
+}
+
+@keyframes raise9 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(2.1) rotate(160deg);
+            transform: scale(2.1) rotate(160deg);
+  }
+}
+
+.svg:nth-child(10) {
+  left: 68%;
+  -webkit-animation: raise10 8s linear infinite;
+          animation: raise10 8s linear infinite;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-transform: scale(2.4) rotate(211deg);
+          transform: scale(2.4) rotate(211deg);
+  z-index: 3;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@-webkit-keyframes raise10 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(2.4) rotate(162deg);
+            transform: scale(2.4) rotate(162deg);
+  }
+}
+
+@keyframes raise10 {
+  to {
+    bottom: 150vh;
+    -webkit-transform: scale(2.4) rotate(162deg);
+            transform: scale(2.4) rotate(162deg);
+  }
+}
+
 #Home {
   background: #192024;
   z-index: -10000;
@@ -333,9 +636,10 @@ body {
   height: 100vh;
   position: relative;
   top: -1em;
+  overflow: hidden;
 }
 
-#Home div {
+#Home #text-anim {
   margin: 0;
   padding: 0;
   border-right: 2px solid white;
@@ -348,7 +652,7 @@ body {
           animation: home1 6s ease-out forwards;
 }
 
-#Home h1 {
+#Home #text-anim h1 {
   font-family: acumin-pro-wide,sans-serif;
   height: 1.5em;
   margin: 0;
@@ -359,18 +663,18 @@ body {
   overflow: hidden;
 }
 
-#Home h1 {
+#Home #text-anim h1 {
   font-size: 35px;
 }
 
 @media screen and (min-width: 320px) {
-  #Home h1 {
+  #Home #text-anim h1 {
     font-size: calc(35px + 5 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
-  #Home h1 {
+  #Home #text-anim h1 {
     font-size: 40px;
   }
 }
@@ -595,13 +899,15 @@ body {
 }
 
 #Services .service-head {
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 0.1rem;
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 0.15rem;
   text-align: center;
   font-weight: 700;
   font-size: 2rem;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   opacity: 0;
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
@@ -612,12 +918,7 @@ body {
   text-align: center;
   width: 70vmin;
   height: 70vmin;
-  background: #000428;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#004e92), to(#000428));
-  background: linear-gradient(to right, #004e92, #000428);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
   position: -webkit-sticky;
   position: sticky;
   margin-bottom: 4rem;
@@ -628,7 +929,7 @@ body {
 }
 
 #Services .a1 p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Londrina Solid', cursive;
   font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -644,17 +945,17 @@ body {
   width: 100%;
 }
 
-#Services .a1 span {
-  background-color: #232e33;
-  position: relative;
-  display: block;
-  height: 4rem;
-  width: 70vmin;
+#Services .a1 p img {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
 }
 
 #customers {
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 0.1rem;
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 0.15rem;
   font-size: 2rem;
   margin: 5rem auto 2rem auto;
   width: 50%;
@@ -724,7 +1025,6 @@ body {
   font-family: 'Bebas Neue', cursive;
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 3rem;
   opacity: 0;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
@@ -738,7 +1038,6 @@ body {
   font-family: 'Bebas Neue', cursive;
   font-size: 1.5rem;
   text-align: center;
-  border-top: 1px solid white;
   border-bottom: 1px solid white;
   width: 80vw;
   height: 0px;
@@ -754,7 +1053,6 @@ body {
   font-size: 1.5rem;
   text-align: center;
   border-top: 1px solid white;
-  border-bottom: 1px solid white;
   width: 80vw;
   height: 0px;
   overflow: hidden;
@@ -763,7 +1061,9 @@ body {
 }
 
 footer {
-  background-color: #333333;
+  margin-top: 5rem;
+  padding: 3rem 0px 3rem 0px;
+  background-color: #192024;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (33%)[3];
