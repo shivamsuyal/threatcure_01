@@ -161,11 +161,13 @@ body {
     top: 0px;
     left: 0px;
     height: 4.6rem;
-    width: 100%;
+    width: 97vw;
     font-weight: bold;
     // background-color: #192024;
     background: none;
     transition: all 200ms ease-out;
+    // border: 1px solid white;
+    padding-right: 10rem;
     
     ul {
       margin: 0;
@@ -529,7 +531,6 @@ $total: 10;
   width: 25vw;
   height: 25vw;
   border-radius: 50%;
-  
   background: #8a2387; /* fallback for old browsers */
   background: linear-gradient(to right, #8a2387, #e94057, #f27121);
   transition: all 600ms ease-out;
@@ -697,7 +698,7 @@ $total: 10;
 
 #lightslider{
   p{
-    width: 10vw;
+    width:fit-content;
   }
 }
 
