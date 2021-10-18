@@ -1,7 +1,7 @@
 (function () {
   const cursor = document.getElementById('cursor');
   const circle = document.getElementById('cur-circle');
-  // const links = document.getElementById("text-anim")
+  const links = document.querySelectorAll('.liquid');
   const editPosCursor = (e) => {
       const { clientX: x, clientY: y } = e;
       cursor.style.left = x + 'px';
@@ -9,28 +9,56 @@
       circle.style.left = x + 'px';
       circle.style.top = y + 'px';
   }
-  // const animateit = function(e) {
-  //     const span = this.querySelector('span');
-  //     const { offsetX: x, offsetY: y } = e,
-  //         { offsetWidth: width, offsetHeight: height } = this,
-  //         move = 25,
-  //         xMove = x / width * (move * 2) - move,
-  //         yMove = y / height * (move * 2) - move;
+  const animateit = function(e) {
+      const span = this.querySelector('span');
+      const { offsetX: x, offsetY: y } = e,
+          { offsetWidth: width, offsetHeight: height } = this,
+          move = 25,
+          xMove = x / width * (move * 2) - move,
+          yMove = y / height * (move * 2) - move;
       
-  //     span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-  //     circle.classList.add('hover');
-  //     if (e.type === 'mouseleave') {
-  //         circle.classList.remove('hover');
-  //         span.style.transform = '';
-  //     }
-  // }
+      span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+      circle.classList.add('hover');
+      if (e.type === 'mouseleave') {
+          circle.classList.remove('hover');
+          span.style.transform = '';
+      }
+  }
   window.addEventListener('mousemove', editPosCursor);
-  // links.forEach(link => link.addEventListener('mousemove', animateit));
-  // links.forEach(link => link.addEventListener('mouseleave', animateit));
+  links.forEach(link => link.addEventListener('mousemove', animateit));
+  links.forEach(link => link.addEventListener('mouseleave', animateit));
 })();
 
+// Navbar
+var big_circle_top=$("#big_circle").offset().top-20;
 
+$(document).scroll(function(){
+  if($(this).scrollTop() > big_circle_top){   
+        $('#navbar').css({"background":"#192024"});
+    } else {
+        $('#navbar').css({"background":"none"});
+    }
+})
 
+// lightslider
+$('#lightslider').lightSlider({
+  controls: false,
+  item: 5,
+  loop: true,
+  pager: false,
+  auto:true,
+  speed:1000,
+  pause:2000,
+  pauseOnHover:true,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        item: 4
+      }
+    }
+  ]
+});
 
 //  THIS IS FOR SHOWING POPUP MENU
   // Get the modal
@@ -149,14 +177,6 @@ observer1.observe(logo)
       text.style.opacity="1"
       text.style.transform="translateY(-20px)"
     }
-    // else{
-    //   if(entries[0].boundingClientRect.bottom > 0){
-    //     // text.style.transition="none"
-    //     text.style.visibility="hidden"
-    //     text.style.opacity="0"
-    //     text.style.transform="translateY(0px)"
-    //   }
-    // }
   }
 
 
@@ -168,11 +188,11 @@ observer1.observe(logo)
 
 
 
-  const servicetext=document.querySelector(".service-head")
+  const servicetext=document.getElementById("up1")
+  // const servicetext2=document.querySelector(".service-topic")
   const customertext=document.getElementById("customers")
   const about1=document.getElementById("about1")
   
-  // console.log(servicetext)
 const options4={
   rootMargin:"10% 0px -10% 0px"
 }
@@ -180,14 +200,15 @@ const callback4_up = function (entries){
   // console.log(entries[0])
   if(entries[0].isIntersecting){
     entries[0].target.style.opacity="1"
-    entries[0].target.style.transform="translateY(-20px)"
+    entries[0].target.style.transform="translateY(0px)"
   }else{
     entries[0].target.style.opacity="0"
-    entries[0].target.style.transform="translateY(0px)"
+    entries[0].target.style.transform="translateY(20px)"
   }
 }
   var observer4= new IntersectionObserver(callback4_up,options4);
   observer4.observe(servicetext)
+  // observer4.observe(servicetext2)
   observer4.observe(customertext)
   observer4.observe(about1)
 
@@ -225,14 +246,14 @@ observer5.observe(about2)
 
 
 
-$('#autoWidth').lightSlider({
-  autoWidth:true,
-  loop:true,
-  enableDrag:true,
-  pager:false,
-  onSliderLoad: function() {
-      $('#autoWidth').removeClass('cS-hidden');
-  } 
-});  
+// $('#autoWidth').lightSlider({
+//   autoWidth:true,
+//   loop:true,
+//   enableDrag:true,
+//   pager:false,
+//   onSliderLoad: function() {
+//       $('#autoWidth').removeClass('cS-hidden');
+//   } 
+// });  
 
 
