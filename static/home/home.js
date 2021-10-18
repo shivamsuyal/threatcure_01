@@ -48,13 +48,20 @@ $('#lightslider').lightSlider({
   pager: false,
   auto:true,
   speed:1000,
+  slideMargin:10,
   pause:2000,
   pauseOnHover:true,
   responsive: [
     {
-      breakpoint: 480,
+      breakpoint: 600,
       settings: {
-        item: 4
+        item: 3
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        item: 2
       }
     }
   ]
