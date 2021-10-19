@@ -43,7 +43,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 1000000;
+  z-index: 10;
 }
 
 #cursor {
@@ -56,12 +56,6 @@ body {
   height: 50px;
   width: 50px;
   mix-blend-mode: difference;
-  z-index: 11;
-}
-
-#cur-circle.hover {
-  -webkit-transform: translate(-50%, -50%) scale(2.5);
-          transform: translate(-50%, -50%) scale(2.5);
 }
 
 #mode {
@@ -78,7 +72,7 @@ body {
   overflow: hidden;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
-  z-index: 600;
+  z-index: 9;
 }
 
 #mode:hover {
@@ -115,7 +109,7 @@ body {
 }
 
 #navbar {
-  z-index: 200;
+  z-index: 9;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -180,8 +174,7 @@ body {
   color: white;
   text-decoration: none;
   padding: 0.7rem;
-  position: relative;
-  right: 0.3rem;
+  margin-right: 0.3rem;
   border: 2px solid green;
   font-size: 1rem;
   font-weight: 500;
@@ -364,13 +357,13 @@ body {
 }
 
 .svg:nth-child(1) {
-  left: 68%;
-  -webkit-animation: raise1 12s linear infinite;
-          animation: raise1 12s linear infinite;
+  left: 41%;
+  -webkit-animation: raise1 13s linear infinite;
+          animation: raise1 13s linear infinite;
   -webkit-animation-delay: -1s;
           animation-delay: -1s;
-  -webkit-transform: scale(-0.3) rotate(264deg);
-          transform: scale(-0.3) rotate(264deg);
+  -webkit-transform: scale(-0.3) rotate(278deg);
+          transform: scale(-0.3) rotate(278deg);
   z-index: -6;
   -webkit-filter: blur(-5px);
           filter: blur(-5px);
@@ -379,27 +372,27 @@ body {
 @-webkit-keyframes raise1 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(-0.3) rotate(210deg);
-            transform: scale(-0.3) rotate(210deg);
+    -webkit-transform: scale(-0.3) rotate(10deg);
+            transform: scale(-0.3) rotate(10deg);
   }
 }
 
 @keyframes raise1 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(-0.3) rotate(210deg);
-            transform: scale(-0.3) rotate(210deg);
+    -webkit-transform: scale(-0.3) rotate(10deg);
+            transform: scale(-0.3) rotate(10deg);
   }
 }
 
 .svg:nth-child(2) {
-  left: 100%;
+  left: 44%;
   -webkit-animation: raise2 18s linear infinite;
           animation: raise2 18s linear infinite;
   -webkit-animation-delay: -2s;
           animation-delay: -2s;
-  -webkit-transform: scale(0) rotate(214deg);
-          transform: scale(0) rotate(214deg);
+  -webkit-transform: scale(0) rotate(66deg);
+          transform: scale(0) rotate(66deg);
   z-index: -5;
   -webkit-filter: blur(-4px);
           filter: blur(-4px);
@@ -408,27 +401,27 @@ body {
 @-webkit-keyframes raise2 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(0) rotate(41deg);
-            transform: scale(0) rotate(41deg);
+    -webkit-transform: scale(0) rotate(271deg);
+            transform: scale(0) rotate(271deg);
   }
 }
 
 @keyframes raise2 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(0) rotate(41deg);
-            transform: scale(0) rotate(41deg);
+    -webkit-transform: scale(0) rotate(271deg);
+            transform: scale(0) rotate(271deg);
   }
 }
 
 .svg:nth-child(3) {
-  left: -1%;
-  -webkit-animation: raise3 19s linear infinite;
-          animation: raise3 19s linear infinite;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-  -webkit-transform: scale(0.3) rotate(320deg);
-          transform: scale(0.3) rotate(320deg);
+  left: 72%;
+  -webkit-animation: raise3 18s linear infinite;
+          animation: raise3 18s linear infinite;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  -webkit-transform: scale(0.3) rotate(22deg);
+          transform: scale(0.3) rotate(22deg);
   z-index: -4;
   -webkit-filter: blur(-3px);
           filter: blur(-3px);
@@ -437,27 +430,27 @@ body {
 @-webkit-keyframes raise3 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(0.3) rotate(345deg);
-            transform: scale(0.3) rotate(345deg);
+    -webkit-transform: scale(0.3) rotate(85deg);
+            transform: scale(0.3) rotate(85deg);
   }
 }
 
 @keyframes raise3 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(0.3) rotate(345deg);
-            transform: scale(0.3) rotate(345deg);
+    -webkit-transform: scale(0.3) rotate(85deg);
+            transform: scale(0.3) rotate(85deg);
   }
 }
 
 .svg:nth-child(4) {
-  left: 63%;
-  -webkit-animation: raise4 8s linear infinite;
-          animation: raise4 8s linear infinite;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-transform: scale(0.6) rotate(338deg);
-          transform: scale(0.6) rotate(338deg);
+  left: 44%;
+  -webkit-animation: raise4 18s linear infinite;
+          animation: raise4 18s linear infinite;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-transform: scale(0.6) rotate(68deg);
+          transform: scale(0.6) rotate(68deg);
   z-index: -3;
   -webkit-filter: blur(-2px);
           filter: blur(-2px);
@@ -466,27 +459,27 @@ body {
 @-webkit-keyframes raise4 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(0.6) rotate(268deg);
-            transform: scale(0.6) rotate(268deg);
+    -webkit-transform: scale(0.6) rotate(222deg);
+            transform: scale(0.6) rotate(222deg);
   }
 }
 
 @keyframes raise4 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(0.6) rotate(268deg);
-            transform: scale(0.6) rotate(268deg);
+    -webkit-transform: scale(0.6) rotate(222deg);
+            transform: scale(0.6) rotate(222deg);
   }
 }
 
 .svg:nth-child(5) {
-  left: 66%;
-  -webkit-animation: raise5 9s linear infinite;
-          animation: raise5 9s linear infinite;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-transform: scale(0.9) rotate(90deg);
-          transform: scale(0.9) rotate(90deg);
+  left: 25%;
+  -webkit-animation: raise5 7s linear infinite;
+          animation: raise5 7s linear infinite;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-transform: scale(0.9) rotate(287deg);
+          transform: scale(0.9) rotate(287deg);
   z-index: -2;
   -webkit-filter: blur(-1px);
           filter: blur(-1px);
@@ -495,27 +488,27 @@ body {
 @-webkit-keyframes raise5 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(0.9) rotate(78deg);
-            transform: scale(0.9) rotate(78deg);
+    -webkit-transform: scale(0.9) rotate(235deg);
+            transform: scale(0.9) rotate(235deg);
   }
 }
 
 @keyframes raise5 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(0.9) rotate(78deg);
-            transform: scale(0.9) rotate(78deg);
+    -webkit-transform: scale(0.9) rotate(235deg);
+            transform: scale(0.9) rotate(235deg);
   }
 }
 
 .svg:nth-child(6) {
-  left: 37%;
-  -webkit-animation: raise6 13s linear infinite;
-          animation: raise6 13s linear infinite;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
-  -webkit-transform: scale(1.2) rotate(28deg);
-          transform: scale(1.2) rotate(28deg);
+  left: 39%;
+  -webkit-animation: raise6 7s linear infinite;
+          animation: raise6 7s linear infinite;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-transform: scale(1.2) rotate(65deg);
+          transform: scale(1.2) rotate(65deg);
   z-index: -1;
   -webkit-filter: blur(0px);
           filter: blur(0px);
@@ -524,27 +517,27 @@ body {
 @-webkit-keyframes raise6 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(1.2) rotate(130deg);
-            transform: scale(1.2) rotate(130deg);
+    -webkit-transform: scale(1.2) rotate(237deg);
+            transform: scale(1.2) rotate(237deg);
   }
 }
 
 @keyframes raise6 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(1.2) rotate(130deg);
-            transform: scale(1.2) rotate(130deg);
+    -webkit-transform: scale(1.2) rotate(237deg);
+            transform: scale(1.2) rotate(237deg);
   }
 }
 
 .svg:nth-child(7) {
-  left: 9%;
-  -webkit-animation: raise7 8s linear infinite;
-          animation: raise7 8s linear infinite;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
-  -webkit-transform: scale(1.5) rotate(139deg);
-          transform: scale(1.5) rotate(139deg);
+  left: -8%;
+  -webkit-animation: raise7 20s linear infinite;
+          animation: raise7 20s linear infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-transform: scale(1.5) rotate(158deg);
+          transform: scale(1.5) rotate(158deg);
   z-index: 0;
   -webkit-filter: blur(1px);
           filter: blur(1px);
@@ -553,27 +546,27 @@ body {
 @-webkit-keyframes raise7 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(1.5) rotate(238deg);
-            transform: scale(1.5) rotate(238deg);
+    -webkit-transform: scale(1.5) rotate(300deg);
+            transform: scale(1.5) rotate(300deg);
   }
 }
 
 @keyframes raise7 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(1.5) rotate(238deg);
-            transform: scale(1.5) rotate(238deg);
+    -webkit-transform: scale(1.5) rotate(300deg);
+            transform: scale(1.5) rotate(300deg);
   }
 }
 
 .svg:nth-child(8) {
-  left: -1%;
-  -webkit-animation: raise8 21s linear infinite;
-          animation: raise8 21s linear infinite;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-  -webkit-transform: scale(1.8) rotate(230deg);
-          transform: scale(1.8) rotate(230deg);
+  left: 40%;
+  -webkit-animation: raise8 17s linear infinite;
+          animation: raise8 17s linear infinite;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-transform: scale(1.8) rotate(265deg);
+          transform: scale(1.8) rotate(265deg);
   z-index: 1;
   -webkit-filter: blur(2px);
           filter: blur(2px);
@@ -582,27 +575,27 @@ body {
 @-webkit-keyframes raise8 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(1.8) rotate(163deg);
-            transform: scale(1.8) rotate(163deg);
+    -webkit-transform: scale(1.8) rotate(93deg);
+            transform: scale(1.8) rotate(93deg);
   }
 }
 
 @keyframes raise8 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(1.8) rotate(163deg);
-            transform: scale(1.8) rotate(163deg);
+    -webkit-transform: scale(1.8) rotate(93deg);
+            transform: scale(1.8) rotate(93deg);
   }
 }
 
 .svg:nth-child(9) {
-  left: 90%;
-  -webkit-animation: raise9 18s linear infinite;
-          animation: raise9 18s linear infinite;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-  -webkit-transform: scale(2.1) rotate(159deg);
-          transform: scale(2.1) rotate(159deg);
+  left: 99%;
+  -webkit-animation: raise9 20s linear infinite;
+          animation: raise9 20s linear infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-transform: scale(2.1) rotate(251deg);
+          transform: scale(2.1) rotate(251deg);
   z-index: 2;
   -webkit-filter: blur(3px);
           filter: blur(3px);
@@ -611,27 +604,27 @@ body {
 @-webkit-keyframes raise9 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(2.1) rotate(357deg);
-            transform: scale(2.1) rotate(357deg);
+    -webkit-transform: scale(2.1) rotate(60deg);
+            transform: scale(2.1) rotate(60deg);
   }
 }
 
 @keyframes raise9 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(2.1) rotate(357deg);
-            transform: scale(2.1) rotate(357deg);
+    -webkit-transform: scale(2.1) rotate(60deg);
+            transform: scale(2.1) rotate(60deg);
   }
 }
 
 .svg:nth-child(10) {
-  left: 41%;
-  -webkit-animation: raise10 13s linear infinite;
-          animation: raise10 13s linear infinite;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-  -webkit-transform: scale(2.4) rotate(110deg);
-          transform: scale(2.4) rotate(110deg);
+  left: 97%;
+  -webkit-animation: raise10 15s linear infinite;
+          animation: raise10 15s linear infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-transform: scale(2.4) rotate(210deg);
+          transform: scale(2.4) rotate(210deg);
   z-index: 3;
   -webkit-filter: blur(4px);
           filter: blur(4px);
@@ -640,22 +633,22 @@ body {
 @-webkit-keyframes raise10 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(2.4) rotate(86deg);
-            transform: scale(2.4) rotate(86deg);
+    -webkit-transform: scale(2.4) rotate(74deg);
+            transform: scale(2.4) rotate(74deg);
   }
 }
 
 @keyframes raise10 {
   to {
     bottom: 150vh;
-    -webkit-transform: scale(2.4) rotate(86deg);
-            transform: scale(2.4) rotate(86deg);
+    -webkit-transform: scale(2.4) rotate(74deg);
+            transform: scale(2.4) rotate(74deg);
   }
 }
 
 #Home {
   background: #192024;
-  z-index: -10000;
+  z-index: -10;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -691,12 +684,11 @@ body {
 }
 
 #Home #text-anim span {
-  font-family: acumin-pro-wide,sans-serif;
+  font-family: 'Monoton',sans-serif;
   height: 1.5em;
   margin: 0;
   padding: 0;
   line-height: 4rem;
-  font-weight: 600;
   font-style: normal;
   overflow: hidden;
 }
@@ -790,7 +782,7 @@ body {
     width: 0;
   }
   100% {
-    width: 7em;
+    width: 8em;
   }
 }
 
@@ -854,7 +846,7 @@ body {
     width: 0;
   }
   100% {
-    width: 7em;
+    width: 8em;
   }
 }
 
@@ -876,6 +868,7 @@ body {
   overflow: hidden !important;
   margin-top: 0rem;
   margin-bottom: 3rem;
+  z-index: -100;
 }
 
 #circle {
@@ -897,6 +890,7 @@ body {
   background: linear-gradient(to right, #8a2387, #e94057, #f27121);
   -webkit-transition: all 600ms ease-out;
   transition: all 600ms ease-out;
+  z-index: -100;
 }
 
 #text {
@@ -911,6 +905,7 @@ body {
   font-family: 'Bebas Neue', cursive;
   margin-left: 1vw;
   margin-right: 1vw;
+  z-index: -20;
 }
 
 #text {
@@ -926,6 +921,20 @@ body {
 @media screen and (min-width: 1200px) {
   #text {
     font-size: 70px;
+  }
+}
+
+@-webkit-keyframes service_img_ani1 {
+  to {
+    -webkit-transform: translate(-100%, 0.5rem);
+            transform: translate(-100%, 0.5rem);
+  }
+}
+
+@keyframes service_img_ani1 {
+  to {
+    -webkit-transform: translate(-100%, 0.5rem);
+            transform: translate(-100%, 0.5rem);
   }
 }
 
@@ -949,7 +958,7 @@ body {
   opacity: 0;
   -webkit-transition: all 500ms ease-out;
   transition: all 500ms ease-out;
-  margin-right: 2rem;
+  margin-right: 1.2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -966,16 +975,17 @@ body {
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 
 #Services .service-head {
+  color: #0CB8A0;
   text-align: right;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: 'KoHo', cursive;
-  color: #232E33;
-  text-shadow: 0px 0px 0.060em #fff, 0.01rem 0px 0.040rem red, 0px 0.01px 0.040rem green, 0.01rem 0.01rem 0.040rem blue;
+  font-family: acumin-pro-wide, cursive;
   letter-spacing: 0.15rem;
   text-align: center;
   font-weight: 700;
@@ -995,9 +1005,10 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  font-family: 'Nixie One';
-  font-weight: bolder;
-  font-size: 1.3rem;
+  font-family: 'Oswald';
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 1.2rem;
   margin: 0;
   padding: 1rem 2rem 0.2rem 2rem;
   color: #fbff00;
@@ -1016,8 +1027,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: -webkit-gradient(linear, left top, right top, from(pink), color-stop(#ed8034), to(#05558d));
-  background: linear-gradient(to right, pink, #ed8034, #05558d);
+  background: -webkit-gradient(linear, left top, right top, from(#ed3462), to(#a51eff));
+  background: linear-gradient(to right, #ed3462, #a51eff);
 }
 
 #Services .a1 {
@@ -1055,14 +1066,36 @@ body {
 }
 
 .carousel {
-  width: auto;
+  width: 100vw;
+  height: 30em;
   overflow: hidden;
   cursor: none !important;
+  position: relative;
+}
+
+.carousel h2 {
+  font-family: 'Saira Stencil One';
+  font-weight: lighter;
+  font-size: vw;
+  width: 100vw;
+  text-align: center;
+}
+
+#c_map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: -10;
 }
 
 #lightslider {
   width: auto;
   margin-top: 3.2em;
+  margin-bottom: 6em;
   cursor: none !important;
 }
 
@@ -1077,17 +1110,115 @@ body {
 }
 
 #customers {
+  border-right: 1px solid white;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: 'Sniglet', cursive;
-  letter-spacing: 0.15rem;
-  text-align: center;
-  padding: 0.7em 1.5em 0.7em 0.5em;
-  font-size: 2em;
+  padding: 0.5em 1.3em 0.5em 1.3em;
+  margin-right: 0.3em;
   -webkit-transition: all 500ms ease-out;
   transition: all 500ms ease-out;
   float: left;
+}
+
+#customers h1 {
+  position: relative;
+  top: 0.3em;
+  color: #0CB8A0;
+  font-family: acumin-pro-wide, cursive;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  font-size: 2em;
+}
+
+#customers p {
+  position: relative;
+  top: -3em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: 'Oswald';
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 1rem 0.3rem 0.2rem 0.3rem;
+  color: #fbff00;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#customers p::after {
+  content: '';
+  height: 0.2rem;
+  border-radius: 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#ed3462), to(#a51eff));
+  background: linear-gradient(to right, #ed3462, #a51eff);
+}
+
+#Pricing {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#Pricing #price_head div h1 {
+  position: relative;
+  top: 0.3em;
+  color: #0CB8A0;
+  font-family: acumin-pro-wide, cursive;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  font-size: 2em;
+}
+
+#Pricing #price_head div p {
+  position: relative;
+  top: -3em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: 'Oswald';
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 1rem 0.3rem 0.2rem 0.3rem;
+  color: #fbff00;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#Pricing #price_head div p::after {
+  content: '';
+  height: 0.2rem;
+  border-radius: 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#ed3462), to(#a51eff));
+  background: linear-gradient(to right, #ed3462, #a51eff);
 }
 
 #About {
@@ -1199,7 +1330,11 @@ footer img {
             transform: translateX(0px);
   }
   #Services .service-topic {
-    top: 4.5rem;
+    top: 15vw;
+  }
+  #lightslider {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 

@@ -50,7 +50,7 @@ $('#lightslider').lightSlider({
   speed:1000,
   slideMargin:10,
   pause:2000,
-  pauseOnHover:true,
+  // pauseOnHover:true,
   responsive: [
     {
       breakpoint: 600,
@@ -196,7 +196,6 @@ observer1.observe(logo)
 
 
   const servicetext=document.getElementById("up1")
-  // const servicetext2=document.querySelector(".service-topic")
   const customertext=document.getElementById("customers")
   const about1=document.getElementById("about1")
   
@@ -215,7 +214,6 @@ const callback4_up = function (entries){
 }
   var observer4= new IntersectionObserver(callback4_up,options4);
   observer4.observe(servicetext)
-  // observer4.observe(servicetext2)
   observer4.observe(customertext)
   observer4.observe(about1)
 
@@ -250,6 +248,32 @@ const callback5_about=function (entries){
 }
 var observer5= new IntersectionObserver(callback5_about,options5)
 observer5.observe(about2)
+
+// new observer
+var service_img=document.getElementById("service_img")
+const options6={
+  rootMargin:"0px 0px -10% 0px"
+}
+const callback6_uptodown=function (entries){
+  console.log(entries[0])
+  if(entries[0].isIntersecting){
+    entries[0].target.style.transition="all 1s ease-out"
+    entries[0].target.style.opacity=1;
+    entries[0].target.style.transform="translate(-100%,0)"
+    entries[0].target.style.animation="service_img_ani1 800ms  infinite alternate"
+  }else{
+    entries[0].target.style.transition="none"
+    entries[0].target.style.opacity=0;
+    entries[0].target.style.transform="translate(-150%,0)"
+    entries[0].target.style.animation="none"
+  }
+}
+var observer6= new IntersectionObserver(callback6_uptodown,options6)
+observer6.observe(service_img)
+
+
+
+
 
 
 
