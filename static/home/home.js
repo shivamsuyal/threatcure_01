@@ -43,6 +43,7 @@ $(document).scroll(function(){
 // lightslider
 $('#lightslider').lightSlider({
   controls: false,
+  // mode:'fade',
   item: 5,
   loop: true,
   pager: false,
@@ -53,7 +54,7 @@ $('#lightslider').lightSlider({
   // pauseOnHover:true,
   responsive: [
     {
-      breakpoint: 600,
+      breakpoint: 1000,
       settings: {
         item: 3
       }
@@ -254,37 +255,56 @@ var service_img=document.getElementById("service_img")
 const options6={
   rootMargin:"0px 0px -10% 0px"
 }
-const callback6_uptodown=function (entries){
-  console.log(entries[0])
+const callback6_service_img=function (entries){
+  // console.log(entries[0])
   if(entries[0].isIntersecting){
     entries[0].target.style.transition="all 1s ease-out"
     entries[0].target.style.opacity=1;
-    entries[0].target.style.transform="translate(-100%,0)"
-    entries[0].target.style.animation="service_img_ani1 800ms  infinite alternate"
+    if(document.documentElement.clientWidth > 500){
+      entries[0].target.style.transform="translate(-100%,0)"
+      entries[0].target.style.animation="service_img_ani_desktop 800ms  infinite alternate"
+    }else{
+      entries[0].target.style.transform="translate(0,0)"
+      entries[0].target.style.animation="service_img_ani_mobile 800ms  infinite alternate"
+    }
+    
   }else{
     entries[0].target.style.transition="none"
     entries[0].target.style.opacity=0;
-    entries[0].target.style.transform="translate(-150%,0)"
-    entries[0].target.style.animation="none"
+    
+    if(document.documentElement.clientWidth > 500){
+      entries[0].target.style.transform="translate(-150%,0)"
+    }else{
+      entries[0].target.style.transform="translate(-50%,0)"
+    }
+    // entries[0].target.style.animation="none"
   }
 }
-var observer6= new IntersectionObserver(callback6_uptodown,options6)
+var observer6= new IntersectionObserver(callback6_service_img,options6)
 observer6.observe(service_img)
 
+// new obeserver
+var c_map=document.getElementById("c_map")
+const options7={
+  threshold:0.3
+}
+
+const callback7_c_map= function(entries,obs7){
+  // alert("f")
+  if(entries[0].isIntersecting){
+    entries[0].target.style.transition="all 2500ms ease-out"
+    entries[0].target.style.opacity=1;
+    obs7.threshold=0.1
+  }else{
+    entries[0].target.style.transition="none"
+    entries[0].target.style.opacity=0;
+  }
+}
+
+var observer7= new IntersectionObserver(callback7_c_map,options7)
+observer7.observe(c_map)
 
 
 
-
-
-
-// $('#autoWidth').lightSlider({
-//   autoWidth:true,
-//   loop:true,
-//   enableDrag:true,
-//   pager:false,
-//   onSliderLoad: function() {
-//       $('#autoWidth').removeClass('cS-hidden');
-//   } 
-// });  
 
 

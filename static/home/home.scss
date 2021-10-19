@@ -565,9 +565,14 @@ $total: 10;
 // }
 
 // Service  sliders
-@keyframes service_img_ani1 {
+@keyframes service_img_ani_desktop {
   to{
     transform: translate(-100%,0.5rem);
+  }
+}
+@keyframes service_img_ani_mobile {
+  to{
+    transform: translate(0,0.5rem);
   }
 }
 #Services{
@@ -587,10 +592,10 @@ $total: 10;
     width: fit-content;
     // border-bottom:1px solid black ;
   }
-  img{
+  #service_img{
     position: sticky;
     top: 4.6rem;
-    transform: translateX(-100%);
+    transform: translate(-100%,0);
     z-index: -100;
     width: 50vw;
     // height: 50vw;
@@ -687,11 +692,11 @@ $total: 10;
   overflow: hidden;
   cursor: none !important;
   position: relative;
-  // background-image: url("./../img/map.jpg");
   h2{
+    margin-top: 2em;
     font-family: 'Saira Stencil One';
     font-weight: lighter;
-    font-size: vw;
+    @include fluid-type($min_width, $max_width, 22px, 36px);
     width: 100vw;
     text-align: center;
   }
@@ -777,7 +782,6 @@ $total: 10;
   flex-direction: column;
 
   #price_head{
-    
     div{
       h1{
         position: relative;
@@ -791,7 +795,7 @@ $total: 10;
       p{
         // border-bottom:2px solid white;
         position: relative;
-        top: -3em;
+        top: -3.4em;
         left: 50%;
         transform: translateX(-50%);
         font-family: 'Oswald';
@@ -815,6 +819,19 @@ $total: 10;
         bottom: 0;
         background: linear-gradient(to right,rgb(237, 52, 98),rgb(165, 30, 255));
       }
+    }
+  }
+  #price_contain{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    #price_info{
+      div{
+        width:100%
+      }
+    }
+    #price_card{
+
     }
   }
 }
@@ -902,19 +919,16 @@ footer{
     align-items:center;
     justify-content:center;
 
-    img{
+    #service_img{
       width: 100vw;
       height: auto;
-      transform: translateX(0px);
+      transform: translate(0,0);
     }
     .service-topic{
       top: 15vw;
     }
   }
-  #lightslider{
-    margin-top: 0;
-    padding-top: 0;
-  }
+  
 }
 
 @media only screen and (max-width: 700px){
@@ -930,13 +944,15 @@ footer{
     
   }
   #lightslider{
-    // padding-right: 5rem;
+    margin-top: 0;
+    padding-top: 0;
     img{
       margin: 0px 2rem 2rem 2rem;
       width: 7rem;
       height: 2rem;
     }
   }
+  
 }
 
 
