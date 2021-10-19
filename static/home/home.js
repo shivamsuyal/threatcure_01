@@ -50,7 +50,7 @@ $('#lightslider').lightSlider({
   auto:true,
   speed:1000,
   slideMargin:10,
-  pause:2000,
+  pause:2500,
   // pauseOnHover:true,
   responsive: [
     {
