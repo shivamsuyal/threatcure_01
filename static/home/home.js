@@ -29,6 +29,15 @@
   links.forEach(link => link.addEventListener('mouseleave', animateit));
 })();
 
+document.addEventListener("mousedown",()=>{
+  cursor.style.backgroundColor="red"
+})
+document.addEventListener("mouseup",()=>{
+  cursor.style.backgroundColor="white"
+})
+
+
+
 // Navbar
 var big_circle_top=$("#big_circle").offset().top-20;
 
@@ -50,7 +59,7 @@ $('#lightslider').lightSlider({
   auto:true,
   speed:1000,
   slideMargin:10,
-  pause:2500,
+  pause:3500,
   // pauseOnHover:true,
   responsive: [
     {
@@ -289,14 +298,12 @@ const options7={
   threshold:0.3
 }
 
-const callback7_c_map= function(entries,obs7){
+const callback7_c_map= function(entries){
   // alert("f")
   if(entries[0].isIntersecting){
     entries[0].target.style.transition="all 2500ms ease-out"
     entries[0].target.style.opacity=1;
-    obs7.threshold=0.1
   }else{
-    entries[0].target.style.transition="none"
     entries[0].target.style.opacity=0;
   }
 }
