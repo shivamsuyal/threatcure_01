@@ -37,6 +37,8 @@ $max_font: 19px;
 
 :root {
     --highlight: #58968E;
+    --f_imp_link:5%;
+    --f_cont_us:5%;
   }
 * {
   cursor: none ;
@@ -945,6 +947,8 @@ footer{
   padding: 3rem 0px 3rem 0px;
   background-color: #192024;
   grid-gap: 2rem;
+  width: 100vw;
+  overflow-x: hidden !important;
   #foot_about{
     // border: 1px solid white;
     text-align: center;
@@ -992,7 +996,7 @@ footer{
     h1::after{
       content: '';
       border-bottom: 0.2rem solid #2B7DE9;
-      width: 5%;
+      width: var(--f_imp_link);
       height: 100%;
       position: absolute;
       top: 0.1px;
@@ -1036,7 +1040,7 @@ footer{
     h1::after{
       content: '';
       border-bottom: 0.2rem solid #2B7DE9;
-      width: 5%;
+      width: var(--f_cont_us);
       height: 100%;
       position: absolute;
       top: 0.1px;
@@ -1071,6 +1075,47 @@ footer{
     }
     p{
       display: inline;
+    }
+  }
+  #foot_last{
+    border-top:0.2rem dashed grey;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2,50vw);
+    p{
+      // width: fit-content;
+      // border: 1px solid white;
+      // width: auto;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      // vertical-align: middle;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      span{
+        display: inline;
+        color: #2B7DE9;
+      }
+    }
+    
+    a{
+      // border: 1px solid white;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // float: right;
+      // text-align: right;
+      // overflow: hidden;
+      // padding-right: 1rem;
+      margin-top:0.5rem ;
+      img{
+        // border: 1px solid red;
+        width: 10em;
+        height: auto;
+        object-fit: contain;
+      }
     }
   }
 }
@@ -1145,6 +1190,7 @@ hr{
   // overflow-x: hidden;
   border-radius: 2em;
   border: 0px;
+  z-index: -20;
 }
 
 hr::after{
@@ -1156,6 +1202,7 @@ hr::after{
   top: -0.5rem;
   left:-10%;
   animation: hr_move 3000ms ease-in-out alternate-reverse infinite;
+  z-index: -10;
 }
 
 @keyframes hr_move {

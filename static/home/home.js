@@ -311,7 +311,9 @@ const callback7_c_map= function(entries){
 var observer7= new IntersectionObserver(callback7_c_map,options7)
 observer7.observe(c_map)
 
-
+function inc_after(elem){
+  // window.getComputedStyle(elem,':after')['width']="100%"
+}
 
 
 
