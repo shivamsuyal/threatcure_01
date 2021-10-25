@@ -857,7 +857,7 @@ $total: 10;
   grid-template-columns: 1fr 2fr;
   padding: 3rem 0px 0em 0px;
   position: relative;
-  height: 100vh;
+  height: fit-content;
   width: 100%;
   // border: 1px dashed white;
   // background-color: #20292e;
@@ -1179,13 +1179,6 @@ footer{
     grid-column: 1 / -1;
     grid-template-columns: repeat(2,50vw);
     p{
-      // width: fit-content;
-      // border: 1px solid white;
-      // width: auto;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
-      // vertical-align: middle;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -1201,10 +1194,6 @@ footer{
       display: flex;
       align-items: center;
       justify-content: center;
-      // float: right;
-      // text-align: right;
-      // overflow: hidden;
-      // padding-right: 1rem;
       margin-top:0.5rem ;
       img{
         // border: 1px solid red;
@@ -1216,7 +1205,26 @@ footer{
   }
 }
 
-
+@media only screen and (max-width: 1000px) {
+  #About{
+    grid-template-columns: 1fr;
+    #about1 div:nth-child(2) p{
+      text-align: center;
+    }
+    #about2{
+      ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        li:nth-child(2){
+          margin-left: 1rem;
+        }
+        li:nth-child(3){
+          margin-top: 0rem;
+        }
+      }
+    }
+  }
+}
 
 
 @media only screen and (max-width: 900px) {
@@ -1248,7 +1256,23 @@ footer{
       top: 15vw;
     }
   }
-  
+  #About{
+    #about1{
+      margin-bottom: 4rem;
+    }
+    #about2{
+      ul{
+        display: grid;
+        grid-template-columns: 1fr;
+        li:nth-child(2){
+          margin-left: 0;
+        }
+        li{
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 700px){
@@ -1283,12 +1307,9 @@ hr{
   height: 0.3rem;
   background-color: chartreuse;
   position: relative;
-  // overflow-x: hidden;
   border-radius: 2em;
   border: 0px;
   z-index: -20;
-  // margin-top:8rem;
-  // margin-bottom: 8rem;
 }
 
 hr::after{
