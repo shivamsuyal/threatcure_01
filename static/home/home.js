@@ -257,7 +257,7 @@ const callback5_about=function (entries){
   }
 }
 var observer5= new IntersectionObserver(callback5_about,options5)
-observer5.observe(about2)
+// observer5.observe(about2)
 
 // new observer
 var service_img=document.getElementById("service_img")
