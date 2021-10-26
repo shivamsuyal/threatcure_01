@@ -669,8 +669,9 @@ $total: 10;
     padding: 0px;
     text-align: center;
     // border:1px solid white;
-    width: 70vmin;
-    height: 70vmin;
+    // calc(min px + (max px - min px)*(100vw - min px)/(max vw - min vw))
+    width: unquote("min(550px,70vmin)");
+    height: unquote("min(550px,70vmin)");
     overflow: hidden;
     position: sticky;
     margin-bottom: 4rem;
