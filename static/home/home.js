@@ -18,11 +18,11 @@
           yMove = y / height * (move * 2) - move;
       
       span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-      circle.classList.add('hover');
-      if (e.type === 'mouseleave') {
-          circle.classList.remove('hover');
-          span.style.transform = '';
-      }
+      // circle.classList.add('hover');
+      // if (e.type === 'mouseleave') {
+      //     circle.classList.remove('hover');
+      //     span.style.transform = '';
+      // }
   }
   window.addEventListener('mousemove', editPosCursor);
   links.forEach(link => link.addEventListener('mousemove', animateit));

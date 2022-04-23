@@ -44,6 +44,9 @@ $max_font: 19px;
   cursor: none ;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -53,6 +56,7 @@ body {
   // height: 4500px;
   overflow-x: hidden!important;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  
 }
 
 // 
@@ -68,6 +72,7 @@ body {
   height: 10px;
   width: 10px;
   border: 2px solid black;
+  // box-shadow: 0px 0px 10px -1px #090c0d;
   // z-index: 10;
 }
 
@@ -76,7 +81,7 @@ body {
   width: 50px;
   mix-blend-mode: difference;
   // z-index: 11;
-  // transition: left 0.25s ease-out, top 0.25s ease-out, transform 0.25s linear;
+  transition: left 0.3s ease-out, top 0.3s ease-out, transform 0.3s linear;
 }
 #cur-circle.hover {
   // transform: translate(-50%, -50%) scale(2.5);
@@ -457,7 +462,7 @@ $total: 10;
     z-index: -100;
     width: 100%;
     height: 100%;
-    object-fit: contain
+    object-fit: contain;
   }
 }
 
